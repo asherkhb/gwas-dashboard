@@ -10,5 +10,6 @@ PMC: [2922003](http://ukpmc.ac.uk/articles/PMC2922003);
 DOI: [10.1038/ng.521](http://dx.doi.org/10.1038%2Fng.521)
 
 ***Data on glycaemic traits have been contributed by MAGIC investigators and have been downloaded from
-[www.magicinvestigators.org](www.magicinvestigators.org)***
+[www.magicinvestigators.org](www.magicinvestigators.org). SNP location, class, and function was obtained from the 
+[UCSC Genome Browser](https://genome.ucsc.edu/) (hg38, snp147 release).***
 
