@@ -5,10 +5,11 @@ import dash_html_components as html
 import plotly.graph_objs as go
 import plotly.figure_factory as ff
 
+import gzip
 import pandas as pd
 
 # https://plot.ly/dash/dash-core-components
-
+# two
 
 # Utility Functions.
 
@@ -36,7 +37,7 @@ def build_description(study_key):
 
 def read_data(study_key):
     print("Reading data for {}".format(study_key))
-    df = pd.read_table('data/{}.tsv.merged'.format(study_key), sep='\t')
+    df = pd.read_table('data/{}.tsv.merged.gz'.format(study_key), compression='gzip', sep='\t') #compression='gzip',sep='\x01' \t
     effects = str_to_unique_list(df, 'func')
     # TODO: Replace this slow ass method.
     #for e in effects:
@@ -162,4 +163,4 @@ def update_hits_table(value):
 
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(debug=True, host='0.0.0.0')
